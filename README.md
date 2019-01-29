@@ -1,8 +1,8 @@
 # Friendly-errors-webpack-plugin
 
-[![npm](https://img.shields.io/npm/v/friendly-errors-webpack-plugin.svg)](https://www.npmjs.com/package/friendly-errors-webpack-plugin)
-[![Build Status](https://travis-ci.org/geowarin/friendly-errors-webpack-plugin.svg?branch=master)](https://travis-ci.org/geowarin/friendly-errors-webpack-plugin)
-[![Build status](https://ci.appveyor.com/api/projects/status/w6fovc9lttaqgx3k/branch/master?svg=true)](https://ci.appveyor.com/project/geowarin/friendly-errors-webpack-plugin/branch/master)
+[![npm](https://img.shields.io/npm/v/friendly-errors-webpack-plugin.svg)](https://www.npmjs.com/package/@soda/friendly-errors-webpack-plugin)
+[![Build Status](https://travis-ci.org/sodatea/friendly-errors-webpack-plugin.svg?branch=master)](https://travis-ci.org/sodatea/friendly-errors-webpack-plugin)
+[![Build status](https://ci.appveyor.com/api/projects/status/bbrt7hmp6lav3erh/branch/master?svg=true)](https://ci.appveyor.com/project/sodatea/friendly-errors-webpack-plugin/branch/master)
 
 Friendly-errors-webpack-plugin recognizes certain classes of webpack
 errors and cleans, aggregates and prioritizes them to provide a better
@@ -16,7 +16,7 @@ errors get handled, please open a [PR](https://help.github.com/articles/creating
 ### Installation
 
 ```bash
-npm install friendly-errors-webpack-plugin --save-dev
+npm install @soda/friendly-errors-webpack-plugin --save-dev
 ```
 
 ### Basic usage
@@ -24,7 +24,7 @@ npm install friendly-errors-webpack-plugin --save-dev
 Simply add `FriendlyErrorsWebpackPlugin` to the plugin section in your Webpack config.
 
 ```javascript
-var FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+var FriendlyErrorsWebpackPlugin = require('@soda/friendly-errors-webpack-plugin');
 
 var webpackConfig = {
   // ...
@@ -147,15 +147,15 @@ new NotifierPlugin({
 
 Webpack's errors processing, is done in four phases:
 
-1. Extract relevant info from webpack errors. This is done by the plugin [here](https://github.com/geowarin/friendly-errors-webpack-plugin/blob/master/src/core/extractWebpackError.js)
+1. Extract relevant info from webpack errors. This is done by the plugin [here](https://github.com/sodatea/friendly-errors-webpack-plugin/blob/master/src/core/extractWebpackError.js)
 2. Apply transformers to all errors to identify and annotate well know errors and give them a priority
 3. Get only top priority error or top priority warnings if no errors are thrown
 4. Apply formatters to all annotated errors
 
-You can add transformers and formatters. Please see [transformErrors](https://github.com/geowarin/friendly-errors-webpack-plugin/blob/master/src/core/transformErrors.js),
-and [formatErrors](https://github.com/geowarin/friendly-errors-webpack-plugin/blob/master/src/core/formatErrors.js)
-in the source code and take a look a the [default transformers](https://github.com/geowarin/friendly-errors-webpack-plugin/tree/master/src/transformers)
-and the [default formatters](https://github.com/geowarin/friendly-errors-webpack-plugin/tree/master/src/formatters).
+You can add transformers and formatters. Please see [transformErrors](https://github.com/sodatea/friendly-errors-webpack-plugin/blob/master/src/core/transformErrors.js),
+and [formatErrors](https://github.com/sodatea/friendly-errors-webpack-plugin/blob/master/src/core/formatErrors.js)
+in the source code and take a look a the [default transformers](https://github.com/sodatea/friendly-errors-webpack-plugin/tree/master/src/transformers)
+and the [default formatters](https://github.com/sodatea/friendly-errors-webpack-plugin/tree/master/src/formatters).
 
 ## TODO
 
