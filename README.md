@@ -1,6 +1,6 @@
 # Friendly-errors-webpack-plugin
 
-[![npm](https://img.shields.io/npm/v/friendly-errors-webpack-plugin.svg)](https://www.npmjs.com/package/@soda/friendly-errors-webpack-plugin)
+[![npm](https://img.shields.io/npm/v/@soda/friendly-errors-webpack-plugin.svg)](https://www.npmjs.com/package/@soda/friendly-errors-webpack-plugin)
 [![Build Status](https://travis-ci.org/sodatea/friendly-errors-webpack-plugin.svg?branch=master)](https://travis-ci.org/sodatea/friendly-errors-webpack-plugin)
 [![Build status](https://ci.appveyor.com/api/projects/status/bbrt7hmp6lav3erh/branch/master?svg=true)](https://ci.appveyor.com/project/sodatea/friendly-errors-webpack-plugin/branch/master)
 
