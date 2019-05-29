@@ -1,5 +1,4 @@
 const formatErrors = require('../../src/core/formatErrors');
-const expect = require('expect');
 
 const simple = (errors) => errors
   .filter(error => !error.type).map(e => e.message);

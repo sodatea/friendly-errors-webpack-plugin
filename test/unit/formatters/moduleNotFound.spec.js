@@ -1,5 +1,4 @@
 const moduleNotFound = require('../../../src/formatters/moduleNotFound');
-const expect = require('expect');
 
 it('Formats module-not-found errors', () => {
   const error = { type: 'module-not-found', module: 'redux' };

@@ -1,5 +1,4 @@
 const moduleNotFound = require('../../../src/transformers/moduleNotFound');
-const expect = require('expect');
 
 const error = {
   name: 'ModuleNotFoundError',

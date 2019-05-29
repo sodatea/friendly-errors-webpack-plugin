@@ -1,5 +1,4 @@
 const babelSyntax = require('../../../src/transformers/babelSyntax');
-const expect = require('expect');
 
 it('Sets severity to 1000', () => {
   const error = { name: 'ModuleBuildError', message: 'SyntaxError' };

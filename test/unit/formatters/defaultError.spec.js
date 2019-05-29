@@ -1,5 +1,4 @@
 const defaultError = require('../../../src/formatters/defaultError');
-const expect = require('expect');
 const stripAnsi = require('strip-ansi');
 
 const noColor = (arr) => arr.map(stripAnsi);

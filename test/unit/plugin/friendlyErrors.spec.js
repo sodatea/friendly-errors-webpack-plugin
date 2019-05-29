@@ -1,4 +1,3 @@
-const expect = require('expect');
 const EventEmitter = require('events');
 const Stats = require('webpack/lib/Stats')
 const Module = require('webpack/lib/Module');
