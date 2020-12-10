@@ -7,7 +7,7 @@
     "node": ">=8.0.0"
   },
   "scripts": {
-    "test": "eslint --ignore-pattern 'test/**' . && jest --testEnvironment node"
+    "test": "eslint --ignore-pattern \"test/**\" . && jest --testEnvironment node"
   },
   "files": [
     "src",
