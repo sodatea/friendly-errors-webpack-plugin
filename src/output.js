@@ -76,7 +76,7 @@ class Debugger {
   }
 
   clearConsole () {
-    if (!this.capturing && this.enabled && process.stdout.isTTY) {
+    if (!process.env.CI && !this.capturing && this.enabled && process.stdout.isTTY) {
       // Fill screen with blank lines. Then move to 0 (beginning of visible part) and clear it
       const blank = '\n'.repeat(process.stdout.rows)
       console.log(blank)
