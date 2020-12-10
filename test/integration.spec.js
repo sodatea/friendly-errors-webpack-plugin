@@ -93,12 +93,34 @@ Use /* eslint-disable */ to ignore all warnings in a file.`
   )
 });
 
+it('integration : should display eslint-webpack-plugin warnings', async() => {
+
+  const logs = await executeAndGetLogs('./fixtures/eslint-webpack-plugin-warnings/webpack.config.js');
+
+  expect(logs.join('\n')).toEqual(
+    `WARNING  Compiled with 1 warning
+
+${filename('fixtures/eslint-webpack-plugin-warnings/index.js')}
+  3:7  warning  'unused' is assigned a value but never used   no-unused-vars
+  4:7  warning  'unused2' is assigned a value but never used  no-unused-vars
+
+${filename('fixtures/eslint-webpack-plugin-warnings/module.js')}
+  1:7  warning  'unused' is assigned a value but never used  no-unused-vars
+
+✖ 3 problems (0 errors, 3 warnings)
+
+You may use special comments to disable some warnings.
+Use // eslint-disable-next-line to ignore the next line.
+Use /* eslint-disable */ to ignore all warnings in a file.`
+  )
+});
+
 it('integration : babel syntax error', async() => {
 
   const logs = await executeAndGetLogs('./fixtures/babel-syntax/webpack.config');
 
   expect(logs).toEqual([
-    'ERROR  Failed to compile with 1 errors',
+    'ERROR  Failed to compile with 1 error',
     '',
     'error  in ./test/fixtures/babel-syntax/index.js',
     '',
@@ -119,7 +141,7 @@ it('integration : mini CSS extract plugin babel error', async() => {
   const logs = await executeAndGetLogs('./fixtures/mini-css-extract-babel-syntax/webpack.config');
   const clean_logs = logs.toString().replace(/\"/g, ""); //<- double quotes issue with slash
   expect(clean_logs).toEqual(
-    `ERROR  Failed to compile with 1 errors,,error  in ./test/fixtures/mini-css-extract-babel-syntax/index.scss,,.test {
+    `ERROR  Failed to compile with 1 error,,error  in ./test/fixtures/mini-css-extract-babel-syntax/index.scss,,.test {
   ^
       Expected digit.
   ╷
